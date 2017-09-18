@@ -504,7 +504,7 @@ cdef class config:
             Ctl_dict[u'acctng_store_job_comment'] = self.__Config_ptr.acctng_store_job_comment
             Ctl_dict[u'acct_gather_energy_type'] = slurm.stringOrNone(self.__Config_ptr.acct_gather_energy_type, '')
             Ctl_dict[u'acct_gather_profile_type'] = slurm.stringOrNone(self.__Config_ptr.acct_gather_profile_type, '')
-            Ctl_dict[u'acct_gather_infiniband_type'] = slurm.stringOrNone(self.__Config_ptr.acct_gather_infiniband_type, '')
+            Ctl_dict[u'acct_gather_interconnect_type'] = slurm.stringOrNone(self.__Config_ptr.acct_gather_interconnect_type, '')
             Ctl_dict[u'acct_gather_filesystem_type'] = slurm.stringOrNone(self.__Config_ptr.acct_gather_filesystem_type, '')
             Ctl_dict[u'acct_gather_node_freq'] = self.__Config_ptr.acct_gather_node_freq
             Ctl_dict[u'authinfo'] = slurm.stringOrNone(self.__Config_ptr.authinfo, '')
@@ -2089,7 +2089,7 @@ cdef class job:
 
             Job_dict[u'features'] = slurm.listOrNone(self._record.features, ',')
             Job_dict[u'fed_origin'] = slurm.stringOrNone(self._record.fed_origin_str, '')
-            Job_dict[u'fed_siblings'] = slurm.stringOrNone(self._record.fed_siblings_str, '')
+            Job_dict[u'fed_siblings'] = slurm.stringOrNone(self._record.fed_siblings_active_str, '')
             Job_dict[u'gres'] = slurm.listOrNone(self._record.gres, ',')
             Job_dict[u'group_id'] = self._record.group_id
 

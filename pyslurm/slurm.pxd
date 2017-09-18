@@ -807,7 +807,7 @@ cdef extern from 'slurm/slurm.h' nogil:
         void *acct_gather_conf
         char *acct_gather_energy_type
         char *acct_gather_profile_type
-        char *acct_gather_infiniband_type
+        char *acct_gather_interconnect_type
         char *acct_gather_filesystem_type
         uint16_t acct_gather_node_freq
         char *authinfo
@@ -1036,7 +1036,7 @@ cdef extern from 'slurm/slurm.h' nogil:
         char *features
         char *fed_origin_str
         uint64_t fed_siblings
-        char *fed_siblings_str
+        char *fed_siblings_active_str
         char *gres
         uint32_t gres_detail_cnt
         char **gres_detail_str
